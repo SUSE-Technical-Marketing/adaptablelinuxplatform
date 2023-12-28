@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <link rel="stylesheet" href="/css/blog.css"/>
+
+  <section class="introthin">
+    <div class="bg-primary">
+      <div class="wrap grid-two">
+        <div><br><br>
+          <h1 style="color: white;"><a href="/downloads">Downloads</a></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="wrap">
+      {{ range .Paginator.Pages }}
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ end }}
+    </section>
+<!--
+    <section class="wrap">
+      <h2>More</h2>
+      <div class="nested-list-reset nested-links">
+        {{- template "_internal/pagination.html" . -}}
+      </div>
+    </section>
+  -->
+  </main>
+{{ end }}

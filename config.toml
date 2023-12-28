@@ -1,0 +1,64 @@
+baseURL = ""
+languageCode = "en-us"
+title = "ALP"
+theme = "projects-theme"
+pluralizeListTitles = false
+enableRobotsTXT = true
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+enableGitInfo = true
+#googleAnalytics = 'UA-56382716-13'
+
+[blackfriday]
+fractions = false
+#hrefTargetBlank = true
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlaintext = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
+
+[params]
+github = "https://build.opensuse.org/project/show/SUSE:ALP"
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "download"
+    name = "Downloads"
+    url = "downloads/"
+    weight = -130
+
+  [[menu.main]]
+    identifier = "community"
+    name = "Community"
+    url = "https://en.opensuse.org/images/6/62/OpenALT2022-AdaptableLinuxPlatform.pdf"
+    weight = -120
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blogs"
+    url = "https://www.suse.com/c/tag/alp/"
+    weight = -70
+
+ [[menu.main]]
+    identifier = "docs"
+    name = "Docs"
+    url = "https://documentation.suse.com/#alp"
+    weight = -110
